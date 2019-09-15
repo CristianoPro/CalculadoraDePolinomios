@@ -24,6 +24,7 @@ public class CalculadoraPolinomio {
 			montaMenu();
 			System.out.print("Digite sua opcao: ");
 			opcao = teclado.nextInt();
+			System.out.println("=======================================================");
 			
 			switch (opcao) {
 			case 1:
@@ -94,17 +95,25 @@ public class CalculadoraPolinomio {
 		int x;
 		System.out.print("Digite o valor de x: ");
 		x = teclado.nextInt();
-		Polinomio p = Criar();
+		Polinomio polinomio = Criar();
 		
-		double valor = p.CalculaValorPolinomio(x);
+		double valor = polinomio.CalculaValorPolinomio(x);
 		
 		System.out.println("O resultado =" + valor  );
 		
 		
 	}
 	private static void Somar() {
-		// TODO Auto-generated method stub
+		System.out.println("Crie o Primeiro polinomio! ");
+		Polinomio polinomio1 = Criar();
+		System.out.println("===========================\n");
+		System.out.println("Crie o Segundo polinomio! ");
+		Polinomio Polinomio2 = Criar();
 		
+		Polinomio polinomioSoma = polinomio1.SomaPolinomio(Polinomio2);
+		System.out.println("===========================\n");
+		polinomioSoma.mostra(polinomioSoma);
+		System.out.println("===========================\n");
 	}
 	private static void Multiplicar() {
 		// TODO Auto-generated method stub
