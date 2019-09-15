@@ -53,12 +53,49 @@ public class CalculadoraPolinomio {
 		}while (opcao !=0 );
 		
 	}
-	private static void Criar() {
+	
+	public static Polinomio Criar() {
+		Scanner teclado = new Scanner(System.in);
+		int grau;
+		System.out.print("Informe o grau do Polinomio: ");
+		grau = teclado.nextInt();
+		double[] termos = new double[grau+1];
+		for(int i = 0; i<termos.length; i++) {
+			
+			double coeficiente = 0;
+			System.out.print("Digite o coeficiente: ");
+			coeficiente = teclado.nextInt();
+			System.out.print("Digite o expoente de x: ");
+			int expoente = 0;
+			expoente = teclado.nextInt();
+			termos[expoente] = coeficiente;
+			System.out.print("O Polinomio tem mais termos? 1=sim, 0=nao: ");
+			int controle = 1;
+			controle = teclado.nextInt();
+			if(controle == 0) {
+				break;
+			}
+			
+		}
 		
+		Polinomio p = new Polinomio(grau);
+		p.setTermos(termos);
+		
+		return p;
+ 		
 		
 	}
 	private static void Calcular() {
-		// TODO Auto-generated method stub
+		Scanner teclado = new Scanner(System.in);
+		int x;
+		System.out.print("Digite o valor de x: ");
+		x = teclado.nextInt();
+		Polinomio p = Criar();
+		
+		double valor = p.CalculaValorPolinomio(x);
+		
+		System.out.println("O resultado =" + valor  );
+		
 		
 	}
 	private static void Somar() {
@@ -80,7 +117,7 @@ public class CalculadoraPolinomio {
 		System.out.println("                  |  2 - Calcular o valor de um Polinomio p/ um valor P(x)|");
 		System.out.println("                  |  3 - Somar dois Polinomios                            |");
 		System.out.println("                  |  4 - Multiplicar dois Polinomios                      |");
-		System.out.println("                  |  5 - Mostra Polinomio                                 |");
+		System.out.println("                  |  5 - indefinido                                       |");
 		System.out.println("                  |  0 - Sair                                             |");
 		System.out.println("                   =======================================================\n");
 	}
