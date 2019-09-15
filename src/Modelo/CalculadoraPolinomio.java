@@ -113,7 +113,16 @@ public class CalculadoraPolinomio {
 		System.out.println("===========================\n");
 	}
 	private static void Multiplicar() {
-		// TODO Auto-generated method stub
+		System.out.println("Crie o Primeiro polinomio! ");
+		Polinomio polinomio1 = Criar();
+		System.out.println("===========================\n");
+		System.out.println("Crie o Segundo polinomio! ");
+		Polinomio Polinomio2 = Criar();
+		
+		Polinomio polinomioMultiplicado = polinomio1.MultiplicaPolinomio(Polinomio2);
+		System.out.println("===========================\n");
+		polinomioMultiplicado.mostra(polinomioMultiplicado);
+		System.out.println("===========================\n");
 		
 	}
 	
