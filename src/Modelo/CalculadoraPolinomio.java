@@ -55,6 +55,7 @@ public class CalculadoraPolinomio {
 	}
 	
 	public static Polinomio Criar() {
+		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 		int grau;
 		System.out.print("Informe o grau do Polinomio: ");
@@ -86,6 +87,7 @@ public class CalculadoraPolinomio {
 		
 	}
 	private static void Calcular() {
+		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 		int x;
 		System.out.print("Digite o valor de x: ");
