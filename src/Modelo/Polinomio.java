@@ -2,7 +2,7 @@ package Modelo;
 /**
  * 
  * @author Cristiano Souza de Oliveira
- *@tia	41612590
+ *tia 41612590
  */
 
 public class Polinomio {

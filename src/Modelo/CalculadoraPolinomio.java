@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * 
  * @author Cristiano Souza de Oliveira
- * @tia	41612590
+ * tia 41612590
  *
  */
 
