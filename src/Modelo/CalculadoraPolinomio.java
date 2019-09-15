@@ -54,7 +54,8 @@ public class CalculadoraPolinomio {
 		
 	}
 	
-	public static Polinomio Criar() {
+	private static Polinomio Criar() {
+		
 		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 		int grau;
@@ -87,6 +88,7 @@ public class CalculadoraPolinomio {
 		
 	}
 	private static void Calcular() {
+		
 		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 		int x;
