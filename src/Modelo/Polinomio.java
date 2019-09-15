@@ -21,8 +21,6 @@ public class Polinomio {
 
 	// imprime o polinomio
 	public void mostra(Polinomio p) {
-		System.out.println("grau: " + p.grau + "\n");
-
 		double[] termos = p.getTermos();
 
 		for (int k = p.getGrau(); k >= 0; k--) {
@@ -35,7 +33,7 @@ public class Polinomio {
 				}
 			}
 		}
-		System.out.println("\n");
+		System.out.println("");
 	}
 
 	// Calcula o valor do polinomio

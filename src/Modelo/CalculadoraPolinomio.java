@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * 
  * @author Cristiano Souza de Oliveira
- * 
+ * @tia	41612590
  *
  */
 
@@ -22,7 +22,7 @@ public class CalculadoraPolinomio {
 			montaMenu();
 			System.out.print("Digite sua opcao: ");
 			opcao = teclado.nextInt();
-			System.out.println("=======================================================");
+			System.out.println("=======================================================\n");
 			
 			switch (opcao) {
 			case 1:
@@ -57,20 +57,22 @@ public class CalculadoraPolinomio {
 		int grau;
 		System.out.print("Informe o grau do Polinomio: ");
 		grau = teclado.nextInt();
+		System.out.println("");
 		double[] termos = new double[grau+1];
 		for(int i = 0; i<termos.length; i++) {
 			
 			double coeficiente = 0;
 			System.out.print("Digite o coeficiente: ");
 			coeficiente = teclado.nextInt();
-			System.out.print("Digite o expoente de x: ");
+			System.out.print("Digite o expoente de x (Para o termo independente digite 0): ");
 			int expoente = 0;
 			expoente = teclado.nextInt();
-			System.out.println("========================================");
+			System.out.println("===========================================================");
 			termos[expoente] = coeficiente;
-			System.out.print("O Polinomio tem mais termos? 1=sim, 0=nao: ");
+			System.out.print("O Polinomio tem mais termos? 1 = sim, 0 = nao: ");
 			int controle = 1;
 			controle = teclado.nextInt();
+			System.out.println("===========================================================");
 			if(controle == 0) {
 				break;
 			}
@@ -79,8 +81,9 @@ public class CalculadoraPolinomio {
 		
 		Polinomio p = new Polinomio(grau);
 		p.setTermos(termos);
+		System.out.print("Polinomio: ");
 		p.mostra(p);
-		
+		System.out.println("===========================================================");
 		return p;
  		
 		
@@ -96,33 +99,35 @@ public class CalculadoraPolinomio {
 		
 		double valor = polinomio.CalculaValorPolinomio(x);
 		
-		System.out.println("O resultado =" + valor  );
+		System.out.println("O resultado  P("+x+") = " + valor  );
 		
 		
 	}
 	private static void Somar() {
-		System.out.println("Crie o Primeiro polinomio! ");
+		System.out.println("=============== Crie o Primeiro polinomio! ================\n");
 		Polinomio polinomio1 = Criar();
-		System.out.println("===========================\n");
-		System.out.println("Crie o Segundo polinomio! ");
+		System.out.println("===========================================================\n");
+		System.out.println("=============== Crie o Segundo polinomio! =================\n");
 		Polinomio Polinomio2 = Criar();
 		
 		Polinomio polinomioSoma = polinomio1.SomaPolinomio(Polinomio2);
-		System.out.println("===========================\n");
+		System.out.println("===========================================================\n");
+		System.out.print("Resultado da Soma = ");
 		polinomioSoma.mostra(polinomioSoma);
-		System.out.println("===========================\n");
+		System.out.println("===========================================================\n");
 	}
 	private static void Multiplicar() {
-		System.out.println("Crie o Primeiro polinomio! ");
+		System.out.println("================ Crie o Primeiro polinomio! ===============\n");
 		Polinomio polinomio1 = Criar();
-		System.out.println("===========================\n");
-		System.out.println("Crie o Segundo polinomio! ");
+		System.out.println("===========================================================\n");
+		System.out.println("================ Crie o Segundo polinomio! ================\n");
 		Polinomio Polinomio2 = Criar();
 		
 		Polinomio polinomioMultiplicado = polinomio1.MultiplicaPolinomio(Polinomio2);
-		System.out.println("===========================\n");
+		System.out.println("===========================================================\n");
+		System.out.print("Resultado da Multiplicao = ");
 		polinomioMultiplicado.mostra(polinomioMultiplicado);
-		System.out.println("===========================\n");
+		System.out.println("===========================================================\n");
 		
 	}
 	
