@@ -1,8 +1,6 @@
 package Modelo;
 
 import java.util.Scanner;
-import java.io.*;
-
 /**
  * 
  * @author Cristiano Souza de Oliveira
@@ -40,9 +38,6 @@ public class CalculadoraPolinomio {
 			case 4:
 				Multiplicar();
 				break;
-			case 5:
-				Mostrar();
-				break;
 			case 0:
 				System.out.println("Saindo...");
 				break;
@@ -71,6 +66,7 @@ public class CalculadoraPolinomio {
 			System.out.print("Digite o expoente de x: ");
 			int expoente = 0;
 			expoente = teclado.nextInt();
+			System.out.println("========================================");
 			termos[expoente] = coeficiente;
 			System.out.print("O Polinomio tem mais termos? 1=sim, 0=nao: ");
 			int controle = 1;
@@ -83,6 +79,7 @@ public class CalculadoraPolinomio {
 		
 		Polinomio p = new Polinomio(grau);
 		p.setTermos(termos);
+		p.mostra(p);
 		
 		return p;
  		
@@ -119,10 +116,7 @@ public class CalculadoraPolinomio {
 		// TODO Auto-generated method stub
 		
 	}
-	private static void Mostrar() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	static void montaMenu() {
 		System.out.println("\n                             ### Calculadora de Polinomios ###");
 		System.out.println("\n                   =======================================================");
@@ -130,7 +124,6 @@ public class CalculadoraPolinomio {
 		System.out.println("                  |  2 - Calcular o valor de um Polinomio p/ um valor P(x)|");
 		System.out.println("                  |  3 - Somar dois Polinomios                            |");
 		System.out.println("                  |  4 - Multiplicar dois Polinomios                      |");
-		System.out.println("                  |  5 - indefinido                                       |");
 		System.out.println("                  |  0 - Sair                                             |");
 		System.out.println("                   =======================================================\n");
 	}

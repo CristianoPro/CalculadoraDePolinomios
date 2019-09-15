@@ -25,11 +25,6 @@ public class Polinomio {
 
 		double[] termos = p.getTermos();
 
-		for (int i = 0; i <= p.grau; i++) {
-			System.out.print("Termo:" + i + " = " + termos[i] + "\n");
-		}
-		System.out.println("\n");
-
 		for (int k = p.getGrau(); k >= 0; k--) {
 			System.out.print(termos[k] + "^" + k + " ");
 		}
