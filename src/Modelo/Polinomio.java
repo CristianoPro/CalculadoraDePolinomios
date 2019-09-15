@@ -28,7 +28,11 @@ public class Polinomio {
 		for (int k = p.getGrau(); k >= 0; k--) {
 			if(termos[k] != 0) {
 				int termo = (int) termos[k];
-				System.out.print(termo + "x^" + k + " ");
+				if(k != 0) {
+					System.out.print(termo + "x^" + k + " ");
+				}else {
+					System.out.print(termo);
+				}
 			}
 		}
 		System.out.println("\n");
